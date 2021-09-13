@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class Practice : MonoBehaviour
 {
-    struct Animal
-    {
-        public string name;
-        public string type;
-        public int weight;
-        public string roar;
-    }
+    
     // Start is called before the first frame update
     void Start()
     {
+        //nested class 즉, 안에 클래스를 정의하면 value로만 메소드를 불러올 수 있으므로
+        //지양하는 것이 좋다
         Animal[] animal = new Animal[4];
 
         animal[0].name = "멍멍이";
@@ -48,4 +44,12 @@ public class Practice : MonoBehaviour
     {
         
     }
+}
+
+public class Animal
+{
+    public string name;
+    public string type;
+    public int weight;
+    public string roar;
 }
